@@ -12,11 +12,12 @@
 
 ol,ul{
     list-style: none;
-
 }
 
 a{
     text-decoration: none;
+    color: inherit;
+    outline: none;
 }
 
                                                          /* HEADER */
@@ -114,23 +115,34 @@ a{
     color: #360c72;
 }
 
+
+
+
+
+.header-mobile{
+    display: none;
+}
+
+
                                                       /* MAIN */
 
 
 
+
+body{
+    background-color: #fcfbff;
+}
 
 .main__contenedor{
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fcfbff;
 }
 
-.carrusel{ 
-    border: 1px solid red;
-    /* creado para separar la img de la botonera */
-}
+/* .carrusel{ 
+     creado para separar la img de la botonera
+} */
 
 .carrusel__contenedor-imagen-1{
     display: flex;
@@ -444,7 +456,57 @@ a{
 
 
 
+                                                      /* Footer */
 
+
+footer{
+    background-color: #fff;
+    width: 100%;
+}
+
+.contenedor-footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1022px;
+    margin: 0 auto;
+    padding: 32px 20px;
+    gap: 8px;
+}
+
+.contenedor-footer img{
+    width: 46px;
+    height: 44px;
+    margin-bottom: 16px;
+}
+
+.contenedor-footer__nav{
+    display: flex;
+    margin-top: 8px;
+}
+
+.footer__nav{
+    flex: 1;
+    margin-right: 24px;
+}
+
+.span{
+    font-size: 16px;
+    line-height: 1.5rem;
+}
+
+.footer__nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer__nav li{
+    font-size: 14px;
+    font-weight: 400px;
+    line-height: 1.5rem;
+    display: block;
+}
 
 
 
@@ -454,6 +516,44 @@ a{
 
 
 @media(max-width:480px){
+
+    .header__lista-menu,.header__lista-ancla, .separador, .header__logo{
+        display: none;
+    }
+
+    .header-mobile{
+        width: 100%;
+        display: flex;
+    }
+
+    .header-mobile__hamburguesa {
+        border: none;
+        font-size: 24px;
+        background: transparent;
+    }
+
+    .header-mobile__logo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-mobile__logo img{
+        max-width: 42px;
+        max-height: 40px;
+        justify-content: center;
+
+    }
+
+    
+
+
+
+
+    .header__contenedor{
+        justify-content: space-between;
+    }
+
     .carrusel__imagen-1{
         border-radius: 0px;
     }
@@ -497,31 +597,4 @@ a{
         font-size: 24px;
         line-height: 26px;
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-body{
-    height: 500vh;
 }
