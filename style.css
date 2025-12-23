@@ -597,4 +597,20 @@ footer{
         font-size: 24px;
         line-height: 26px;
     }
+
+    .contenedor-footer{
+        align-items: center;
+    }
+
+    .contenedor-footer__nav{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .footer__nav{
+        flex: 0 0 48%;
+        margin-right: 0px;
+        margin-bottom: 24px;
+    }
 }
